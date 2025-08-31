@@ -1,0 +1,44 @@
+https://github.com/qt/qtapplicationmanager/archive/v6.9.1.tar.gz -> qt-qtapplicationmanager-v6.9.1.tar.gz
+https://github.com/qt/qtcoap/archive/v6.9.1.tar.gz -> qt-qtcoap-v6.9.1.tar.gz
+https://github.com/qt/qtmqtt/archive/v6.9.1.tar.gz -> qt-qtmqtt-v6.9.1.tar.gz
+https://github.com/qt/qtopcua/archive/v6.9.1.tar.gz -> qt-qtopcua-v6.9.1.tar.gz
+
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qt3d-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qt5compat-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtactiveqt-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtbase-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtcharts-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtconnectivity-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtdatavis3d-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtdeclarative-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtdoc-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtgraphs-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtgrpc-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qthttpserver-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtimageformats-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtlanguageserver-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtlocation-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtlottie-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtmultimedia-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtnetworkauth-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtpositioning-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtquick3d-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtquick3dphysics-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtquickeffectmaker-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtquicktimeline-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtremoteobjects-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtscxml-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtsensors-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtserialbus-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtserialport-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtshadertools-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtspeech-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtsvg-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qttools-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qttranslations-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtvirtualkeyboard-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtwayland-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtwebchannel-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtwebengine-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtwebsockets-everywhere-src-6.9.1.tar.xz
+https://download.qt.io/archive/qt/6.9/6.9.1/submodules/qtwebview-everywhere-src-6.9.1.tar.xz
