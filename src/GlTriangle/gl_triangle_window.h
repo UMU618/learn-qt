@@ -22,7 +22,7 @@ class GlTriangleWindow : public QOpenGLWindow, protected QOpenGLFunctions {
   void OnTimer();
 
  private:
-  QOpenGLShaderProgram* shader_program_;
+  QOpenGLShaderProgram* shader_program_{};
   GLint pos_{};
   GLint col_{};
   GLint matrix_uniform_{};

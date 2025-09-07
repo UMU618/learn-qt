@@ -1,9 +1,15 @@
 #include "gl_triangle_window.h"
 
+#include <array>
+#include <string_view>
+
 #include <QtGui/QScreen>
 #include <QtGui/QVector3D>
 
-static const char* kVertexShaderSource =
+using namespace std::string_view_literals;
+
+namespace {
+constexpr auto kVertexShaderSource{
     "attribute highp vec4 posAttr;\n"
     "attribute lowp vec4 colAttr;\n"
     "varying lowp vec4 col;\n"
@@ -11,13 +17,14 @@ static const char* kVertexShaderSource =
     "void main() {\n"
     "   col = colAttr;\n"
     "   gl_Position = matrix * posAttr;\n"
-    "}\n";
+    "}\n"sv};
 
-static const char* kFragmentShaderSource =
+constexpr auto kFragmentShaderSource{
     "varying lowp vec4 col;\n"
     "void main() {\n"
     "   gl_FragColor = col;\n"
-    "}\n";
+    "}\n"sv};
+}  // namespace
 
 GlTriangleWindow::GlTriangleWindow(QWindow* parent)
     : QOpenGLWindow(NoPartialUpdate, parent), animate_timer_{new QTimer(this)} {
@@ -32,9 +39,9 @@ void GlTriangleWindow::initializeGL() {
 
   shader_program_ = new QOpenGLShaderProgram(this);
   shader_program_->addShaderFromSourceCode(QOpenGLShader::Vertex,
-                                           kVertexShaderSource);
+                                           kVertexShaderSource.data());
   shader_program_->addShaderFromSourceCode(QOpenGLShader::Fragment,
-                                           kFragmentShaderSource);
+                                           kFragmentShaderSource.data());
   shader_program_->link();
   pos_ = shader_program_->attributeLocation("posAttr");
   Q_ASSERT(pos_ != -1);
@@ -43,6 +50,7 @@ void GlTriangleWindow::initializeGL() {
   matrix_uniform_ = shader_program_->uniformLocation("matrix");
   Q_ASSERT(matrix_uniform_ != -1);
 
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   animate_timer_->start();
 }
 
@@ -65,13 +73,14 @@ void GlTriangleWindow::paintGL() {
 
   shader_program_->setUniformValue(matrix_uniform_, matrix);
 
-  static const GLfloat kVertices[] = {0.0f, 0.707f, -0.5f, -0.5f, 0.5f, -0.5f};
+  constexpr std::array<GLfloat, 6> kVertices{0.0f,  0.707f, -0.5f,
+                                             -0.5f, 0.5f,   -0.5f};
 
-  static const GLfloat kColors[] = {1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-                                    0.0f, 0.0f, 0.0f, 1.0f};
+  constexpr std::array<GLfloat, 9> kColors{1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
+                                           0.0f, 0.0f, 0.0f, 1.0f};
 
-  glVertexAttribPointer(pos_, 2, GL_FLOAT, GL_FALSE, 0, kVertices);
-  glVertexAttribPointer(col_, 3, GL_FLOAT, GL_FALSE, 0, kColors);
+  glVertexAttribPointer(pos_, 2, GL_FLOAT, GL_FALSE, 0, kVertices.data());
+  glVertexAttribPointer(col_, 3, GL_FLOAT, GL_FALSE, 0, kColors.data());
 
   glEnableVertexAttribArray(pos_);
   glEnableVertexAttribArray(col_);
