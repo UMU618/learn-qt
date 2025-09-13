@@ -80,3 +80,6 @@ CMakeLists.txt.user*
 .rcc/
 .uic/
 build*/
+
+#  SPIR-V(Standard Portable Intermediate Representation)
+*.spv
