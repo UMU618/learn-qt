@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui)
+find_package(Vulkan REQUIRED)
 
 if(MSVC)
   add_compile_options("/source-charset:utf-8")
@@ -24,9 +25,10 @@ add_executable(VkTriangle
   triangle_renderer.h triangle_renderer.cpp
   res/vk_triangle.qrc
 )
-target_link_libraries(VkTriangle
+target_link_libraries(VkTriangle PRIVATE
   Qt${QT_VERSION_MAJOR}::Core
   Qt${QT_VERSION_MAJOR}::Gui
+  Vulkan::Vulkan
 )
 
 include(GNUInstallDirs)
