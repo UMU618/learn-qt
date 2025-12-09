@@ -1,4 +1,4 @@
-﻿#include "triangle_renderer.h"
+#include "triangle_renderer.h"
 
 #include <QFile>
 #include <QVulkanFunctions>
@@ -25,6 +25,8 @@ inline VkDeviceSize Aligned(VkDeviceSize v, VkDeviceSize byte_align) {
 
 TriangleRenderer::TriangleRenderer(QVulkanWindow* w, bool msaa) noexcept
     : window_(w) {
+  w->setPreferredColorFormats(
+      {VK_FORMAT_B8G8R8A8_UNORM, VK_FORMAT_R8G8B8A8_UNORM});
   if (msaa) {
     const QVector<int> counts = w->supportedSampleCounts();
     qDebug() << "Supported sample counts:" << counts;
@@ -369,8 +371,8 @@ void TriangleRenderer::releaseResources() noexcept {
 }
 
 void TriangleRenderer::startNextFrame() noexcept {
-  VkClearColorValue clear_color{{0.0f, 0.25f, 0.0f, 1.0f}};
-  VkClearDepthStencilValue clear_ds{.depth = 1, .stencil = 0};
+  VkClearColorValue clear_color{.float32{0.0f, 0.25f, 0.0f, 1.0f}};
+  VkClearDepthStencilValue clear_ds{.depth = 1.0f, .stencil = 0};
   VkClearValue clear_values[3]{{.color = clear_color},
                                {.depthStencil = clear_ds},
                                {.color = clear_color}};
