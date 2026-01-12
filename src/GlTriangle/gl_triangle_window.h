@@ -3,8 +3,13 @@
 
 #include <QtCore/QTimer>
 #include <QtGui/QOpenGLFunctions>
+#if QT_VERSION_MAJOR==5
 #include <QtGui/QOpenGLShaderProgram>
 #include <QtGui/QOpenGLWindow>
+#else
+#include <QtOpenGL/QOpenGLShaderProgram>
+#include <QtOpenGL/QOpenGLWindow>
+#endif
 
 class GlTriangleWindow : public QOpenGLWindow, protected QOpenGLFunctions {
   Q_OBJECT
