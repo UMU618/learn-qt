@@ -13,6 +13,14 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui)
 find_package(Vulkan REQUIRED)
 
+if(MSVC)
+  if (${QT_VERSION_MAJOR} EQUAL 5)
+    add_compile_options("/source-charset:utf-8")
+    add_compile_options("/execution-charset:utf-8")
+  endif()
+  set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+  set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMakeGen")
+endif()
 add_executable(VkInfo
   main.cpp
 )
